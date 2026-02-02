@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cx1kst4miaxyv"]
+
+[ext_resource type="Script" uid="uid://dymyu2khxs7s2" path="res://assets/scripts/main_scene.gd" id="1_0bbc3"]
+[ext_resource type="PackedScene" uid="uid://bv11anjjt7ki0" path="res://assets/scenes/level1.tscn" id="2_aiirs"]
+
+[node name="MainScene" type="Node2D" unique_id=1865979419]
+script = ExtResource("1_0bbc3")
+levels = Array[PackedScene]([ExtResource("2_aiirs")])

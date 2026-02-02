@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cnd6e7ubhgvc6"]
+
+[ext_resource type="Texture2D" uid="uid://dpehdja8rncv7" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.png" id="1_i5wvk"]
+[ext_resource type="PackedScene" uid="uid://b7j1eovtit7v" path="res://assets/scenes/animation_controller.tscn" id="2_rn7u1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p1k4t"]
+size = Vector2(33, 132)
+
+[node name="Platform" type="AnimatableBody2D" unique_id=1889658172]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2131338017]
+position = Vector2(7.5, 55)
+scale = Vector2(2.0625, 7.1111116)
+texture = ExtResource("1_i5wvk")
+region_enabled = true
+region_rect = Rect2(32, 32, 16, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508323651]
+position = Vector2(7.5, 57)
+shape = SubResource("RectangleShape2D_p1k4t")
+
+[node name="AnimationController" parent="." unique_id=407558840 instance=ExtResource("2_rn7u1")]
