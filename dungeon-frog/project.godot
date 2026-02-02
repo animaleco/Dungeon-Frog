@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Dungeon Frog"
-run/main_scene="uid://bv11anjjt7ki0"
+run/main_scene="uid://cx1kst4miaxyv"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -53,4 +53,4 @@ move_right={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0.14533746, 0.096917525, 0.31700817, 1)
+environment/defaults/default_clear_color=Color(0.20386195, 0.15418842, 0.43521512, 0.011764706)

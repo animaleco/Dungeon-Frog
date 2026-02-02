@@ -59,10 +59,10 @@ tile_set = ExtResource("1_lr0kx")
 [node name="Borders" parent="." unique_id=1095808582 instance=ExtResource("1_xoos5")]
 
 [node name="KillZone" parent="." unique_id=1525606513 instance=ExtResource("7_lyog1")]
-position = Vector2(-92, 202)
+position = Vector2(-92.04, 153.595)
 
 [node name="Player" parent="." unique_id=921028562 groups=["player"] instance=ExtResource("2_lyog1")]
-position = Vector2(-229, 38)
+position = Vector2(-229, 35)
 _speed = 150.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1653175333]

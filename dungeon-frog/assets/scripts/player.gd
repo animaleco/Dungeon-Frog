@@ -39,17 +39,23 @@ func _physics_process(delta):
 		
 	# animation
 	if !is_on_floor():
-		animation.play("front idle")
+		animation.play("idle")
 	elif velocity.x != 0:
-		animation.play("right run")
+		animation.play("run")
 	else:
-		animation.play("right idle")
+		animation.play("idle")
 
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	print("muerto")
 	_death = true
-	animation.stop()
+	animation.play("death")
+	
 	print("stop")
+	# await get_tree().create_timer(0.5).timeout <-- forma abreviada
+	var timer: Timer = Timer.new()
+	add_child(timer)
+	timer.start(0.7)
+	await timer.timeout
 	player_died.emit()
 	print("emit")
