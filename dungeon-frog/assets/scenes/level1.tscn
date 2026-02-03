@@ -6,7 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://cnd6e7ubhgvc6" path="res://assets/scenes/platform.tscn" id="3_4aev3"]
 [ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_f0uwh"]
 [ext_resource type="Script" uid="uid://b2lnrp1ghgmc0" path="res://assets/scripts/animation_controller.gd" id="4_xoos5"]
+[ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/coin_container.tscn" id="5_kbvyv"]
+[ext_resource type="PackedScene" uid="uid://d08go7047w8gc" path="res://assets/scenes/camera_2d.tscn" id="5_uki8p"]
 [ext_resource type="PackedScene" uid="uid://dy8da10jwojva" path="res://assets/scenes/kill_zone.tscn" id="7_lyog1"]
+[ext_resource type="PackedScene" uid="uid://dkk0w0pdavloi" path="res://assets/scenes/trap.tscn" id="8_4aev3"]
+[ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/coin.tscn" id="9_f0uwh"]
 
 [sub_resource type="Animation" id="Animation_5gf0t"]
 length = 0.001
@@ -59,19 +63,20 @@ tile_set = ExtResource("1_lr0kx")
 [node name="Borders" parent="." unique_id=1095808582 instance=ExtResource("1_xoos5")]
 
 [node name="KillZone" parent="." unique_id=1525606513 instance=ExtResource("7_lyog1")]
-position = Vector2(-92.04, 153.595)
+position = Vector2(-92.04, 156.315)
 
 [node name="Player" parent="." unique_id=921028562 groups=["player"] instance=ExtResource("2_lyog1")]
 position = Vector2(-229, 35)
 _speed = 150.0
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1653175333]
-zoom = Vector2(2, 2)
-limit_top = -130
-limit_bottom = 87
-limit_smoothed = true
+[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("5_uki8p")]
 
 [node name="Platforms" type="Node" parent="." unique_id=1908066663]
+
+[node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("5_kbvyv")]
+
+[node name="coin" parent="CoinContainer" unique_id=1514033672 instance=ExtResource("9_f0uwh")]
+position = Vector2(-11, 10)
 
 [node name="Platform" type="Node2D" parent="." unique_id=931524297]
 
@@ -99,3 +104,6 @@ one_shot = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Trigger" unique_id=1671741296]
 position = Vector2(-20, -25)
 shape = SubResource("RectangleShape2D_j62u1")
+
+[node name="Trap" parent="." unique_id=247176691 instance=ExtResource("8_4aev3")]
+position = Vector2(-79, -106)

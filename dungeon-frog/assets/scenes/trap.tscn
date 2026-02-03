@@ -1,6 +1,38 @@
 [gd_scene format=3 uid="uid://dkk0w0pdavloi"]
 
-[node name="Trap" type="RigidBody2D" unique_id=247176691]
-collision_mask = 4
+[ext_resource type="Texture2D" uid="uid://dpehdja8rncv7" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.png" id="1_ddtxu"]
+[ext_resource type="Script" uid="uid://vwcnk3n51x2s" path="res://assets/scripts/trap.gd" id="1_f48xy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f48xy"]
+size = Vector2(16, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmivx"]
+size = Vector2(14, 4)
+
+[node name="Trap" type="RigidBody2D" unique_id=247176691 node_paths=PackedStringArray("raycast")]
+collision_mask = 5
 lock_rotation = true
 freeze = true
+script = ExtResource("1_f48xy")
+raycast = NodePath("RayCast2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2118707934]
+texture = ExtResource("1_ddtxu")
+region_enabled = true
+region_rect = Rect2(32, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1738775132]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_f48xy")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=641780429]
+position = Vector2(-8, 0)
+target_position = Vector2(0, 250)
+collision_mask = 4
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1998822057]
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=167623553]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_bmivx")

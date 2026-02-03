@@ -30,3 +30,12 @@ func _reset_level():
 	print("aa")
 	_create_level.call_deferred(_recent_level)
 	print("aaa")
+	
+func next_level():
+	_recent_level += 1
+	var timer: Timer = Timer.new()
+	add_child(timer)
+	timer.start(0.4)
+	await timer.timeout
+	_remove_level()
+	_create_level.call_deferred(_recent_level)

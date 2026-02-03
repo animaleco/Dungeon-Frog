@@ -50,7 +50,7 @@ func _on_area_2d_body_entered(_body: Node2D) -> void:
 	print("muerto")
 	_death = true
 	animation.play("death")
-	
+	animation.stop()
 	print("stop")
 	# await get_tree().create_timer(0.5).timeout <-- forma abreviada
 	var timer: Timer = Timer.new()
