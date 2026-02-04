@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bv11anjjt7ki0"]
 
+[ext_resource type="Script" uid="uid://b0tuk6uv5xjxu" path="res://assets/scripts/level.gd" id="1_khpyu"]
 [ext_resource type="TileSet" uid="uid://f5iwklegkkfg" path="res://assets/scenes/borders/new_tile_set.tres" id="1_lr0kx"]
 [ext_resource type="PackedScene" uid="uid://be8kvspbwbdpf" path="res://assets/scenes/borders/borders.tscn" id="1_xoos5"]
 [ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="2_lyog1"]
@@ -52,6 +53,7 @@ _data = {
 size = Vector2(9.5, 27)
 
 [node name="Level1" type="Node2D" unique_id=2042642581]
+script = ExtResource("1_khpyu")
 
 [node name="Level" type="TileMapLayer" parent="." unique_id=653886197]
 tile_set = ExtResource("1_lr0kx")
@@ -67,7 +69,6 @@ position = Vector2(-92.04, 156.315)
 
 [node name="Player" parent="." unique_id=921028562 groups=["player"] instance=ExtResource("2_lyog1")]
 position = Vector2(-229, 35)
-_speed = 150.0
 
 [node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("5_uki8p")]
 
@@ -107,3 +108,6 @@ shape = SubResource("RectangleShape2D_j62u1")
 
 [node name="Trap" parent="." unique_id=247176691 instance=ExtResource("8_4aev3")]
 position = Vector2(-79, -106)
+
+[node name="Trap2" parent="." unique_id=1789367668 instance=ExtResource("8_4aev3")]
+position = Vector2(-41, -107)

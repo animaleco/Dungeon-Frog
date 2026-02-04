@@ -1,3 +1,4 @@
+class_name Player
 extends CharacterBody2D
 
 signal player_died
@@ -7,9 +8,9 @@ signal player_died
 @export var _speed = 100.0
 @export var _jump_velocity = -210.0
 
-
+var coins_container: CoinsContainer
 var _death: bool
-
+var _can_move = true
 
 func _ready():
 	add_to_group("players")
@@ -18,14 +19,23 @@ func _ready():
 func _physics_process(delta):
 	if _death:
 		return
-	
 		
 	velocity += get_gravity() * delta
+	
+		# animation
+	if  not is_on_floor():
+		animation.play("idle")
+	elif velocity.x != 0:
+		animation.play("run")
+	else:
+		animation.play("idle")
+	
+	if not _can_move:
+		return
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = _jump_velocity
-
 
 	if Input.is_action_pressed("move_right"):
 		velocity.x = _speed
@@ -37,25 +47,18 @@ func _physics_process(delta):
 		velocity.x = 0
 	move_and_slide()
 		
-	# animation
-	if !is_on_floor():
-		animation.play("idle")
-	elif velocity.x != 0:
-		animation.play("run")
-	else:
-		animation.play("idle")
 
+func _disable() -> void:
+	_can_move = false
+	velocity.x = 0
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	print("muerto")
 	_death = true
 	animation.play("death")
-	animation.stop()
+	await get_tree().create_timer(0.3).timeout
 	print("stop")
 	# await get_tree().create_timer(0.5).timeout <-- forma abreviada
-	var timer: Timer = Timer.new()
-	add_child(timer)
-	timer.start(0.7)
-	await timer.timeout
+	await get_tree().create_timer(0.5).timeout
 	player_died.emit()
 	print("emit")

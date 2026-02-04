@@ -1,21 +1,22 @@
+class_name Coin
 extends Node2D
 
 @export var area_2d: Area2D
 @export var reproductor: AudioStreamPlayer2D
 
-var coins_container: CoinsContainer
+signal collected(coin: Coin)
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	area_2d.body_entered.connect(_recollect)
-	
 	_start_animation()
 	
 
 func _recollect(_body):
-	coins_container.collect_coin()
 	reproductor.reparent(get_parent())
 	reproductor.play()
+	collected.emit(self)
 	queue_free()
 
 func _start_animation():
