@@ -32,7 +32,6 @@ func _reset_level():
 	
 	
 func next_level():
-	var current = levels[_recent_level]
 	if _instantiated_level and _instantiated_level is Level:
 		_instantiated_level.player._disable()
 		
