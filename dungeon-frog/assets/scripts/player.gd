@@ -13,7 +13,6 @@ var _death: bool
 var _can_move = true
 
 func _ready():
-	add_to_group("players")
 	area_2d.body_entered.connect(_on_area_2d_body_entered)
 
 func _physics_process(delta):

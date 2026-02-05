@@ -13,7 +13,7 @@ func _ready() -> void:
 		coin.collected.connect(collect_coin)
 	
 	
-func collect_coin(coin: Coin):
+func collect_coin(_coin: Coin):
 	_collected_coins += 1
 	
 	if _collected_coins == _total_coins:

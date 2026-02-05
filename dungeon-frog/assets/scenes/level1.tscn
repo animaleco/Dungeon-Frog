@@ -5,52 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://be8kvspbwbdpf" path="res://assets/scenes/borders/borders.tscn" id="1_xoos5"]
 [ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="2_lyog1"]
 [ext_resource type="PackedScene" uid="uid://cnd6e7ubhgvc6" path="res://assets/scenes/platform.tscn" id="3_4aev3"]
-[ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_f0uwh"]
-[ext_resource type="Script" uid="uid://b2lnrp1ghgmc0" path="res://assets/scripts/animation_controller.gd" id="4_xoos5"]
 [ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/coin_container.tscn" id="5_kbvyv"]
 [ext_resource type="PackedScene" uid="uid://d08go7047w8gc" path="res://assets/scenes/camera_2d.tscn" id="5_uki8p"]
 [ext_resource type="PackedScene" uid="uid://dy8da10jwojva" path="res://assets/scenes/kill_zone.tscn" id="7_lyog1"]
 [ext_resource type="PackedScene" uid="uid://dkk0w0pdavloi" path="res://assets/scenes/trap.tscn" id="8_4aev3"]
 [ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/coin.tscn" id="9_f0uwh"]
-
-[sub_resource type="Animation" id="Animation_5gf0t"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-136, 25)]
-}
-
-[sub_resource type="Animation" id="Animation_cb5na"]
-resource_name = "move"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.12),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-136, 25), Vector2(-113, 25)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_j62u1"]
-_data = {
-&"RESET": SubResource("Animation_5gf0t"),
-&"move": SubResource("Animation_cb5na")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_j62u1"]
-size = Vector2(9.5, 27)
 
 [node name="Level1" type="Node2D" unique_id=2042642581]
 script = ExtResource("1_khpyu")
@@ -72,42 +31,20 @@ position = Vector2(-229, 35)
 
 [node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("5_uki8p")]
 
-[node name="Platforms" type="Node" parent="." unique_id=1908066663]
-
 [node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("5_kbvyv")]
 
 [node name="coin" parent="CoinContainer" unique_id=1514033672 instance=ExtResource("9_f0uwh")]
 position = Vector2(-11, 10)
-
-[node name="Platform" type="Node2D" parent="." unique_id=931524297]
-
-[node name="Platform" parent="Platform" unique_id=1889658172 instance=ExtResource("3_4aev3")]
-position = Vector2(-136, 25)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform" unique_id=262544171]
-root_node = NodePath("../Platform")
-libraries/ = SubResource("AnimationLibrary_j62u1")
-
-[node name="AnimationController" type="Node" parent="Platform" unique_id=1018956432 node_paths=PackedStringArray("animation_player", "trigger")]
-script = ExtResource("4_xoos5")
-animation_player = NodePath("../AnimationPlayer")
-auto_find_animation_player = false
-trigger = NodePath("../Trigger")
-
-[node name="Trigger" type="Area2D" parent="Platform" unique_id=1813263457]
-position = Vector2(-134, 25)
-collision_layer = 5
-collision_mask = 5
-script = ExtResource("4_f0uwh")
-trigger_name = "Trigger"
-one_shot = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform/Trigger" unique_id=1671741296]
-position = Vector2(-20, -25)
-shape = SubResource("RectangleShape2D_j62u1")
 
 [node name="Trap" parent="." unique_id=247176691 instance=ExtResource("8_4aev3")]
 position = Vector2(-79, -106)
 
 [node name="Trap2" parent="." unique_id=1789367668 instance=ExtResource("8_4aev3")]
 position = Vector2(-41, -107)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=289405767]
+
+[node name="Platform" parent="Node2D" unique_id=1889658172 instance=ExtResource("3_4aev3")]
+position = Vector2(-136, 25)
+
+[editable path="Node2D/Platform"]

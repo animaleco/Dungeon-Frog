@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cmcrwx63jeesq"]
+
+[ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="1_5csff"]
+
+[node name="trigger_controller" type="Node" unique_id=1828950865]
+script = ExtResource("1_5csff")
+one_shot = true

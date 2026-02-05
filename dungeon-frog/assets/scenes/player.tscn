@@ -201,7 +201,7 @@ animations = [{
 size = Vector2(8, 80.00001)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beuf1"]
-size = Vector2(12, 19)
+size = Vector2(3, 19)
 
 [node name="Player" type="CharacterBody2D" unique_id=921028562 node_paths=PackedStringArray("animation", "area_2d")]
 z_index = 5
@@ -210,7 +210,6 @@ collision_mask = 5
 script = ExtResource("1_ratp2")
 animation = NodePath("AnimatedSprite2D")
 area_2d = NodePath("Area2D")
-_speed = 150.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1732179574]
 position = Vector2(3, -32)
@@ -218,10 +217,9 @@ scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_tcr7l")
 animation = &"death"
 autoplay = "idle"
-frame = 6
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512872728]
+visible = false
 position = Vector2(2, -30)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_tcr7l")
@@ -231,5 +229,5 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1862554214]
-position = Vector2(2, -29)
+position = Vector2(1.5, -29)
 shape = SubResource("RectangleShape2D_beuf1")
