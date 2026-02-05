@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cnd6e7ubhgvc6"]
 
-[ext_resource type="Texture2D" uid="uid://dpehdja8rncv7" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.png" id="1_i5wvk"]
-[ext_resource type="Script" uid="uid://ct5oiullpw811" path="res://assets/scripts/traps.gd" id="1_rn7u1"]
-[ext_resource type="PackedScene" uid="uid://b7j1eovtit7v" path="res://assets/scenes/animation_controller.tscn" id="2_rn7u1"]
-[ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="3_wqdlb"]
+[ext_resource type="Script" uid="uid://ct5oiullpw811" path="res://assets/scripts/floor_traps.gd" id="1_4cxa6"]
+[ext_resource type="Texture2D" uid="uid://dpehdja8rncv7" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.png" id="2_nhim7"]
+[ext_resource type="PackedScene" uid="uid://b7j1eovtit7v" path="res://assets/scenes/animation_controller.tscn" id="3_aiq4x"]
+[ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_klli3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1k4t"]
 size = Vector2(33, 132)
@@ -47,15 +47,15 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqdlb"]
 size = Vector2(5.5, 20)
 
-[node name="Platform" type="AnimatableBody2D" unique_id=1889658172]
+[node name="FloorTramp" type="AnimatableBody2D" unique_id=1889658172]
 collision_layer = 0
 collision_mask = 4
-script = ExtResource("1_rn7u1")
+script = ExtResource("1_4cxa6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2131338017]
 position = Vector2(7.5, 55)
 scale = Vector2(2.0625, 7.1111116)
-texture = ExtResource("1_i5wvk")
+texture = ExtResource("2_nhim7")
 region_enabled = true
 region_rect = Rect2(32, 32, 16, 18)
 
@@ -63,7 +63,7 @@ region_rect = Rect2(32, 32, 16, 18)
 position = Vector2(7.5, 57)
 shape = SubResource("RectangleShape2D_p1k4t")
 
-[node name="AnimationController" parent="." unique_id=407558840 node_paths=PackedStringArray("animation_player") instance=ExtResource("2_rn7u1")]
+[node name="AnimationController" parent="." unique_id=407558840 node_paths=PackedStringArray("animation_player") instance=ExtResource("3_aiq4x")]
 animation_player = NodePath("../AnimationPlayer")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1133965502]
@@ -72,7 +72,7 @@ libraries/ = SubResource("AnimationLibrary_bj2xv")
 [node name="Trigger" type="Area2D" parent="." unique_id=280649629]
 collision_layer = 4
 collision_mask = 4
-script = ExtResource("3_wqdlb")
+script = ExtResource("4_klli3")
 one_shot = true
 metadata/_custom_type_script = "uid://bj8x0xeqfo31n"
 

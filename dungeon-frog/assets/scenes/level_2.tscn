@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://bw02g4m3a4u2y"]
 
-[ext_resource type="Script" uid="uid://b0tuk6uv5xjxu" path="res://assets/scripts/level.gd" id="1_3kka6"]
+[ext_resource type="Script" uid="uid://b0tuk6uv5xjxu" path="res://assets/scripts/level_manager.gd" id="1_3kka6"]
 [ext_resource type="PackedScene" uid="uid://be8kvspbwbdpf" path="res://assets/scenes/borders/borders.tscn" id="1_cpfpa"]
 [ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="2_sapp8"]
 [ext_resource type="PackedScene" uid="uid://dy8da10jwojva" path="res://assets/scenes/kill_zone.tscn" id="3_e3oql"]
@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/coin_container.tscn" id="3_j604x"]
 [ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/coin.tscn" id="4_gcp6a"]
 [ext_resource type="TileSet" uid="uid://f5iwklegkkfg" path="res://assets/scenes/borders/new_tile_set.tres" id="6_3kka6"]
-[ext_resource type="PackedScene" uid="uid://dkk0w0pdavloi" path="res://assets/scenes/trap.tscn" id="7_gckjo"]
+[ext_resource type="PackedScene" uid="uid://dkk0w0pdavloi" path="res://assets/scenes/falling_trap.tscn" id="7_gckjo"]
 
 [node name="level2" type="Node2D" unique_id=658475228]
 script = ExtResource("1_3kka6")
