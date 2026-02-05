@@ -47,7 +47,7 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqdlb"]
 size = Vector2(5.5, 20)
 
-[node name="FloorTramp" type="AnimatableBody2D" unique_id=1889658172]
+[node name="FloorTrap" type="AnimatableBody2D" unique_id=1889658172]
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_4cxa6")

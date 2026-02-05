@@ -203,7 +203,7 @@ size = Vector2(8, 80.00001)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beuf1"]
 size = Vector2(3, 19)
 
-[node name="Player" type="CharacterBody2D" unique_id=921028562 node_paths=PackedStringArray("animation", "area_2d")]
+[node name="Player" type="CharacterBody2D" unique_id=921028562 node_paths=PackedStringArray("animation", "area_2d") groups=["player"]]
 z_index = 5
 collision_layer = 4
 collision_mask = 5
@@ -219,7 +219,6 @@ animation = &"death"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512872728]
-visible = false
 position = Vector2(2, -30)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_tcr7l")

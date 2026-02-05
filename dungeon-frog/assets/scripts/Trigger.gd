@@ -18,11 +18,9 @@ func _ready():
 	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body: Node2D) -> void:
-	# Verificar si el cuerpo está en el grupo objetivo
 	if not body.is_in_group(target_group):
 		return
 	
-	# Si es one_shot y ya se activó, ignorar
 	if one_shot and _has_been_triggered:
 		return
 	
