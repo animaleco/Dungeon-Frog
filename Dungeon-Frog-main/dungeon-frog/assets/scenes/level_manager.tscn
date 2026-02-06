@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6fon6h7wne45"]
+
+[ext_resource type="Script" uid="uid://b0tuk6uv5xjxu" path="res://assets/scripts/level_manager.gd" id="1_la3yo"]
+[ext_resource type="PackedScene" uid="uid://bv11anjjt7ki0" path="res://assets/scenes/level1.tscn" id="2_1qy8m"]
+[ext_resource type="PackedScene" uid="uid://bw02g4m3a4u2y" path="res://assets/scenes/level_2.tscn" id="3_ufje2"]
+[ext_resource type="PackedScene" uid="uid://dljb72vvs41ap" path="res://assets/scenes/end_scene.tscn" id="4_p0g4m"]
+
+[node name="level_manager" type="Node" unique_id=625218637]
+script = ExtResource("1_la3yo")
+levels = Array[PackedScene]([ExtResource("2_1qy8m"), ExtResource("3_ufje2"), ExtResource("4_p0g4m")])

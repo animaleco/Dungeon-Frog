@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://b7j1eovtit7v"]
-
-[ext_resource type="Script" uid="uid://b2lnrp1ghgmc0" path="res://assets/scripts/animation_controller.gd" id="1_c0pk7"]
-
-[node name="AnimationController" type="Node" unique_id=407558840]
-script = ExtResource("1_c0pk7")

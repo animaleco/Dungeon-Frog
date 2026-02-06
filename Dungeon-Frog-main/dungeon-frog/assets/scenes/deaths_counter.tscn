@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://sni4jrbj14dc"]
+
+[ext_resource type="Script" uid="uid://cs3osew1de4au" path="res://assets/scripts/deaths_counter.gd" id="1_gdm22"]
+[ext_resource type="Theme" uid="uid://1femstcjmd1o" path="res://themes/ui_ingame.tres" id="2_8gsgp"]
+
+[node name="DeathsCounter" type="Control" unique_id=1476899251 node_paths=PackedStringArray("label")]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_top = 17.525
+offset_bottom = 17.525
+grow_horizontal = 2
+script = ExtResource("1_gdm22")
+label = NodePath("ColorRect/HBoxContainer/Value")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=881908284]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -45.0
+offset_top = -15.5
+offset_right = 45.0
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.36078432, 0.8784314, 0.5803922)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect" unique_id=537777597]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.5
+offset_top = -20.0
+offset_right = 39.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+
+[node name="Title" type="Label" parent="ColorRect/HBoxContainer" unique_id=1140132601]
+layout_mode = 2
+theme = ExtResource("2_8gsgp")
+text = "Deaths:"
+
+[node name="Value" type="Label" parent="ColorRect/HBoxContainer" unique_id=1659487091]
+layout_mode = 2
+theme = ExtResource("2_8gsgp")
+text = "0"

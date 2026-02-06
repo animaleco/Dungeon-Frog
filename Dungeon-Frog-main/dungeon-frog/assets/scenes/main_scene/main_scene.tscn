@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cx1kst4miaxyv"]
+
+[ext_resource type="Script" uid="uid://dymyu2khxs7s2" path="res://assets/scripts/main_scene.gd" id="1_0bbc3"]
+[ext_resource type="PackedScene" uid="uid://b6fon6h7wne45" path="res://assets/scenes/level_manager.tscn" id="3_rdtq2"]
+[ext_resource type="PackedScene" uid="uid://d08go7047w8gc" path="res://assets/scenes/camera_2d.tscn" id="4_ppxmx"]
+[ext_resource type="PackedScene" uid="uid://b3x6jnswrbcx5" path="res://assets/scenes/game_controller.tscn" id="5_va4wb"]
+[ext_resource type="Resource" uid="uid://blcrlyjofpc4w" path="res://Resources/game.tres" id="6_bqfir"]
+[ext_resource type="Script" uid="uid://cwatqy0wsyrmx" path="res://assets/scripts/pause_controller.gd" id="7_bqfir"]
+[ext_resource type="PackedScene" uid="uid://sni4jrbj14dc" path="res://assets/scenes/deaths_counter.tscn" id="8_vs3kp"]
+
+[node name="MainScene" type="Node2D" unique_id=1865979419]
+script = ExtResource("1_0bbc3")
+
+[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("4_ppxmx")]
+
+[node name="level_manager" parent="." unique_id=625218637 node_paths=PackedStringArray("game_controller") instance=ExtResource("3_rdtq2")]
+game_controller = NodePath("../GameController")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1534418127]
+
+[node name="DeathsCounter" parent="CanvasLayer" unique_id=1476899251 instance=ExtResource("8_vs3kp")]
+
+[node name="GameController" parent="." unique_id=348863499 instance=ExtResource("5_va4wb")]
+game = ExtResource("6_bqfir")
+
+[node name="PauseController" type="Node" parent="." unique_id=640989824]
+process_mode = 3
+script = ExtResource("7_bqfir")
