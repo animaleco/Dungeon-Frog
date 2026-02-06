@@ -1,9 +1,11 @@
 class_name CoinsContainer
 extends Node
 
-var _total_coins= 0
-var _collected_coins: int
+var _total_coins = 0
+var _collected_coins: int = 0
+
 signal all_coins_collected()
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

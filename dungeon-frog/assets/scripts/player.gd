@@ -52,12 +52,12 @@ func _disable() -> void:
 	velocity.x = 0
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
-	print("muerto")
 	_death = true
 	animation.play("death")
 	await get_tree().create_timer(0.3).timeout
-	print("stop")
 	# await get_tree().create_timer(0.5).timeout <-- forma abreviada
 	await get_tree().create_timer(0.5).timeout
 	player_died.emit()
-	print("emit")
+	GlobalController.add_death()
+	
+	
