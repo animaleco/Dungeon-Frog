@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dkreqnay0100g"]
+
+[ext_resource type="Script" uid="uid://d0iwm14j672p1" path="res://assets/scripts/sound_manager.gd" id="1_gy4j0"]
+[ext_resource type="AudioStream" uid="uid://duqy7nd4pfywh" path="res://assets/sfx/Steps.ogg" id="2_c81i5"]
+[ext_resource type="AudioStream" uid="uid://b1fogl8y1283s" path="res://assets/sfx/Death.mp3" id="3_dgaib"]
+[ext_resource type="AudioStream" uid="uid://btlegn8hn1cea" path="res://assets/sfx/Jump.ogg" id="4_c81i5"]
+
+[node name="SoundManager" type="Node" unique_id=1099683850]
+script = ExtResource("1_gy4j0")
+sfx = Array[AudioStream]([ExtResource("2_c81i5"), ExtResource("3_dgaib"), ExtResource("4_c81i5")])

@@ -1,0 +1,77 @@
+[gd_scene format=4 uid="uid://chdmh23y0bmdy"]
+
+[ext_resource type="Script" uid="uid://dx7ijytv7oyi7" path="res://assets/scripts/coin.gd" id="1_jn77b"]
+[ext_resource type="Texture2D" uid="uid://bbpkrw5qxbxmm" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.webp" id="2_qlhn6"]
+[ext_resource type="Script" uid="uid://cmbp3uehcivk" path="res://assets/scripts/sfx_key.gd" id="4_qlhn6"]
+
+[sub_resource type="AudioStreamMP3" id="AudioStreamMP3_gufri"]
+data = PackedByteArray("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")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jn77b"]
+size = Vector2(15, 6)
+
+[sub_resource type="Animation" id="Animation_jn77b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gufri"]
+resource_name = "rotation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(-1, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlhn6"]
+_data = {
+&"RESET": SubResource("Animation_jn77b"),
+&"rotation": SubResource("Animation_gufri")
+}
+
+[node name="coin" type="Node2D" unique_id=1535847078 node_paths=PackedStringArray("area_2d", "producer")]
+script = ExtResource("1_jn77b")
+area_2d = NodePath("Area2D")
+producer = NodePath("Sprite2D/SfxKey")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=318424078]
+texture = ExtResource("2_qlhn6")
+region_enabled = true
+region_rect = Rect2(176, 152, 16, 8)
+
+[node name="SfxKey" type="AudioStreamPlayer2D" parent="Sprite2D" unique_id=1893359712]
+rotation = 3.1415927
+scale = Vector2(2.0576115, -1)
+stream = SubResource("AudioStreamMP3_gufri")
+bus = &"SFX"
+script = ExtResource("4_qlhn6")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1735382549]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=709292814]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_jn77b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=672634585]
+libraries/ = SubResource("AnimationLibrary_qlhn6")
+autoplay = &"rotation"

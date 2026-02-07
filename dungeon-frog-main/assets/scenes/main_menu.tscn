@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://djnagk4rwovdl"]
+
+[ext_resource type="Theme" uid="uid://m3y075qktk54" path="res://themes/menu_button.tres" id="1_uu6ob"]
+[ext_resource type="StyleBox" uid="uid://ou2p01lqqk1b" path="res://button_styles/normal.tres" id="2_obrqb"]
+[ext_resource type="StyleBox" uid="uid://bbnyt1b5b27q4" path="res://button_styles/pressed.tres" id="3_57ux2"]
+[ext_resource type="StyleBox" uid="uid://dbreqod51b0ww" path="res://button_styles/hover.tres" id="4_f2xsc"]
+[ext_resource type="StyleBox" uid="uid://cy246k6x3lb6b" path="res://button_styles/focus.tres" id="5_v71do"]
+[ext_resource type="Script" uid="uid://bn5fgpb0tebro" path="res://assets/scripts/exit.gd" id="6_v71do"]
+[ext_resource type="Script" uid="uid://xqeauoaxg6ml" path="res://assets/scripts/play.gd" id="6_xmmar"]
+[ext_resource type="PackedScene" uid="uid://cx1kst4miaxyv" path="res://assets/scenes/main_scene/main_scene.tscn" id="7_66en2"]
+[ext_resource type="Script" uid="uid://c2daq17nsestn" path="res://assets/scripts/load.gd" id="8_tp4c4"]
+[ext_resource type="PackedScene" uid="uid://b3x6jnswrbcx5" path="res://assets/scenes/game_controller.tscn" id="10_uek13"]
+
+[node name="MainMenu" type="Control" unique_id=1454925081]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=566979111]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Play" type="Button" parent="VBoxContainer" unique_id=535417796]
+layout_mode = 2
+theme = ExtResource("1_uu6ob")
+theme_override_styles/normal = ExtResource("2_obrqb")
+theme_override_styles/pressed = ExtResource("3_57ux2")
+theme_override_styles/hover = ExtResource("4_f2xsc")
+theme_override_styles/focus = ExtResource("5_v71do")
+text = "Play"
+script = ExtResource("6_xmmar")
+main_scene = ExtResource("7_66en2")
+
+[node name="Load" type="Button" parent="VBoxContainer" unique_id=1191282538 node_paths=PackedStringArray("game_controller", "play_button")]
+layout_mode = 2
+theme = ExtResource("1_uu6ob")
+theme_override_styles/normal = ExtResource("2_obrqb")
+theme_override_styles/pressed = ExtResource("3_57ux2")
+theme_override_styles/hover = ExtResource("4_f2xsc")
+theme_override_styles/focus = ExtResource("5_v71do")
+text = "Load"
+script = ExtResource("8_tp4c4")
+game_controller = NodePath("../../GameController")
+play_button = NodePath("../Play")
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=261807103]
+layout_mode = 2
+theme = ExtResource("1_uu6ob")
+theme_override_styles/normal = ExtResource("2_obrqb")
+theme_override_styles/pressed = ExtResource("3_57ux2")
+theme_override_styles/hover = ExtResource("4_f2xsc")
+theme_override_styles/focus = ExtResource("5_v71do")
+text = "Exit"
+script = ExtResource("6_v71do")
+
+[node name="GameController" parent="." unique_id=348863499 instance=ExtResource("10_uek13")]

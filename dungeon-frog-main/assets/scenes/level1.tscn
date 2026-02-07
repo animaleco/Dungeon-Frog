@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bv11anjjt7ki0"]
+
+[ext_resource type="Script" uid="uid://dkxbla2p3wy7v" path="res://assets/scripts/level.gd" id="1_kbvyv"]
+[ext_resource type="TileSet" uid="uid://f5iwklegkkfg" path="res://assets/scenes/borders/new_tile_set.tres" id="1_lr0kx"]
+[ext_resource type="PackedScene" uid="uid://be8kvspbwbdpf" path="res://assets/scenes/borders/borders.tscn" id="1_xoos5"]
+[ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="2_lyog1"]
+[ext_resource type="PackedScene" uid="uid://cnd6e7ubhgvc6" path="res://assets/scenes/floor_trap.tscn" id="3_4aev3"]
+[ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/coin_container.tscn" id="5_kbvyv"]
+[ext_resource type="PackedScene" uid="uid://d08go7047w8gc" path="res://assets/scenes/camera_2d.tscn" id="5_uki8p"]
+[ext_resource type="PackedScene" uid="uid://dy8da10jwojva" path="res://assets/scenes/kill_zone.tscn" id="7_lyog1"]
+[ext_resource type="PackedScene" uid="uid://dkk0w0pdavloi" path="res://assets/scenes/falling_trap.tscn" id="8_4aev3"]
+[ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/coin.tscn" id="9_f0uwh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kbvyv"]
+
+[node name="Level1" type="Node2D" unique_id=2042642581]
+script = ExtResource("1_kbvyv")
+
+[node name="Layers" type="Node" parent="." unique_id=1851129605]
+
+[node name="Level" type="TileMapLayer" parent="Layers" unique_id=653886197 groups=["player"]]
+tile_set = ExtResource("1_lr0kx")
+
+[node name="Background" type="TileMapLayer" parent="Layers" unique_id=1256177065]
+z_index = -1
+tile_set = ExtResource("1_lr0kx")
+
+[node name="Borders" parent="Layers" unique_id=1095808582 instance=ExtResource("1_xoos5")]
+
+[node name="KillZone" parent="Layers" unique_id=1525606513 instance=ExtResource("7_lyog1")]
+position = Vector2(-92.04, 156.315)
+
+[node name="Player" parent="." unique_id=921028562 instance=ExtResource("2_lyog1")]
+position = Vector2(-229, 35)
+
+[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("5_uki8p")]
+
+[node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("5_kbvyv")]
+
+[node name="coin" parent="CoinContainer" unique_id=1535847078 instance=ExtResource("9_f0uwh")]
+
+[node name="Traps" type="Node2D" parent="." unique_id=1619171799]
+
+[node name="FallingTrap" parent="Traps" unique_id=247176691 instance=ExtResource("8_4aev3")]
+position = Vector2(-28, -109)
+
+[node name="Sprite2D" parent="Traps/FallingTrap" index="0" unique_id=2118707934]
+texture = SubResource("CompressedTexture2D_kbvyv")
+
+[node name="FallingTrap2" parent="Traps" unique_id=2127503658 instance=ExtResource("8_4aev3")]
+position = Vector2(-75, -107)
+
+[node name="FloorTramp" parent="." unique_id=1889658172 instance=ExtResource("3_4aev3")]
+position = Vector2(-136, 25)
+
+[editable path="Traps/FallingTrap"]
