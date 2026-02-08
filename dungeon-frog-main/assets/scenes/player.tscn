@@ -5,7 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://c7rcqbylap878" path="res://assets/Stickman/Thin.png" id="3_0gfpk"]
 [ext_resource type="Texture2D" uid="uid://b6oaa4uxj4hq0" path="res://assets/Stickman/JumpDown.png" id="4_0hrit"]
 [ext_resource type="Texture2D" uid="uid://bfbcm7jjqvxj0" path="res://assets/Stickman/Run.png" id="5_o5c66"]
-[ext_resource type="PackedScene" uid="uid://dkreqnay0100g" path="res://assets/scenes/sound_manager.tscn" id="6_0gfpk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tc801"]
 atlas = ExtResource("2_8sknh")
@@ -211,8 +210,6 @@ collision_mask = 5
 script = ExtResource("1_ratp2")
 animation = NodePath("AnimatedSprite2D")
 area_2d = NodePath("Area2D")
-
-[node name="SoundManager" parent="." unique_id=1099683850 instance=ExtResource("6_0gfpk")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1732179574]
 position = Vector2(3, -32)
