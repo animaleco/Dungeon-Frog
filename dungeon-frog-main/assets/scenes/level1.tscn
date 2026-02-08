@@ -11,8 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://dkk0w0pdavloi" path="res://assets/scenes/falling_trap.tscn" id="8_4aev3"]
 [ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/coin.tscn" id="9_f0uwh"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kbvyv"]
-
 [node name="Level1" type="Node2D" unique_id=2042642581]
 script = ExtResource("1_kbvyv")
 
@@ -41,16 +39,11 @@ position = Vector2(-229, 35)
 
 [node name="Traps" type="Node2D" parent="." unique_id=1619171799]
 
-[node name="FallingTrap" parent="Traps" unique_id=247176691 instance=ExtResource("8_4aev3")]
-position = Vector2(-28, -109)
-
-[node name="Sprite2D" parent="Traps/FallingTrap" index="0" unique_id=2118707934]
-texture = SubResource("CompressedTexture2D_kbvyv")
-
 [node name="FallingTrap2" parent="Traps" unique_id=2127503658 instance=ExtResource("8_4aev3")]
 position = Vector2(-75, -107)
 
+[node name="FallingTrap" parent="Traps" unique_id=247176691 instance=ExtResource("8_4aev3")]
+position = Vector2(-37, -106)
+
 [node name="FloorTramp" parent="." unique_id=1889658172 instance=ExtResource("3_4aev3")]
 position = Vector2(-136, 25)
-
-[editable path="Traps/FallingTrap"]

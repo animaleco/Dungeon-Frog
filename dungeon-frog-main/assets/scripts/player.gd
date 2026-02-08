@@ -24,13 +24,10 @@ func _physics_process(delta):
 		# animation
 	if  not is_on_floor():
 		animation.play("jump")
-		SoundManager.stop_steps()
 	elif velocity.x != 0:
 		animation.play("run")
-		SoundManager.play_steps()
 	else:
 		animation.play("idle")
-		SoundManager.stop_steps()
 	
 	if not _can_move:
 		return
@@ -38,7 +35,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = _jump_velocity
-		SoundManager.play_sfx(2)
+		SoundManager.play_sfx(2, -15.0)
 
 	if Input.is_action_pressed("move_right"):
 		velocity.x = _speed
@@ -57,7 +54,6 @@ func _disable() -> void:
 
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	_death = true
-	SoundManager.stop_steps()
 	SoundManager.play_sfx(1)
 	animation.play("death")
 	await get_tree().create_timer(0.3).timeout
