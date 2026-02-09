@@ -27,12 +27,6 @@ tile_map_data = PackedByteArray("AADo/wEAAAACAAIAAAAVAAIAAAACAAIAAAD///P/AAACAAI
 [node name="Player" parent="." unique_id=921028562 instance=ExtResource("2_sapp8")]
 position = Vector2(-245, 33)
 
-[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("3_gcp6a")]
-
-[node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("3_j604x")]
-
-[node name="coin" parent="CoinContainer" unique_id=1535847078 instance=ExtResource("4_gcp6a")]
-
 [node name="Traps" type="Node2D" parent="." unique_id=844986723]
 
 [node name="FallingTrap" parent="Traps" unique_id=247176691 instance=ExtResource("7_gckjo")]
@@ -40,5 +34,11 @@ position = Vector2(-221, -107)
 
 [node name="FallingTrap2" parent="Traps" unique_id=1223314993 instance=ExtResource("7_gckjo")]
 position = Vector2(-170, -107)
+
+[node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("3_j604x")]
+
+[node name="coin" parent="CoinContainer" unique_id=1535847078 instance=ExtResource("4_gcp6a")]
+
+[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("3_gcp6a")]
 
 [editable path="Traps/FallingTrap"]

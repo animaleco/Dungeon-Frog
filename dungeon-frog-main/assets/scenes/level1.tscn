@@ -31,8 +31,6 @@ position = Vector2(-92.04, 156.315)
 [node name="Player" parent="." unique_id=921028562 instance=ExtResource("2_lyog1")]
 position = Vector2(-229, 35)
 
-[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("5_uki8p")]
-
 [node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("5_kbvyv")]
 
 [node name="coin" parent="CoinContainer" unique_id=1535847078 instance=ExtResource("9_f0uwh")]
@@ -47,3 +45,7 @@ position = Vector2(-37, -106)
 
 [node name="FloorTramp" parent="." unique_id=1889658172 instance=ExtResource("3_4aev3")]
 position = Vector2(-136, 25)
+
+[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("5_uki8p")]
+
+[editable path="Player"]

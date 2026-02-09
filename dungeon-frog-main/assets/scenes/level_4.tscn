@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://op3wv3h0gl87"]
+
+[ext_resource type="Script" uid="uid://dkxbla2p3wy7v" path="res://assets/scripts/level.gd" id="1_2nu71"]
+[ext_resource type="PackedScene" uid="uid://be8kvspbwbdpf" path="res://assets/scenes/borders/borders.tscn" id="1_hqnr5"]
+[ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="2_bp4x8"]
+[ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/coin_container.tscn" id="3_idpgg"]
+[ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/coin.tscn" id="4_2nu71"]
+[ext_resource type="PackedScene" uid="uid://dy8da10jwojva" path="res://assets/scenes/kill_zone.tscn" id="6_c3dpg"]
+
+[node name="level4" type="Node2D" unique_id=1478841074]
+script = ExtResource("1_2nu71")
+
+[node name="Borders" parent="." unique_id=1095808582 instance=ExtResource("1_hqnr5")]
+
+[node name="Player" parent="." unique_id=921028562 instance=ExtResource("2_bp4x8")]
+position = Vector2(-248, 31)
+
+[node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("3_idpgg")]
+
+[node name="coin" parent="CoinContainer" unique_id=1535847078 instance=ExtResource("4_2nu71")]
+position = Vector2(-82, 2)
+
+[node name="KillZone" parent="." unique_id=1525606513 instance=ExtResource("6_c3dpg")]
+position = Vector2(-116, 161)

@@ -204,6 +204,7 @@ size = Vector2(8, 80.00001)
 size = Vector2(3, 19)
 
 [node name="Player" type="CharacterBody2D" unique_id=921028562 node_paths=PackedStringArray("animation", "area_2d") groups=["player"]]
+modulate = Color(1.129, 1.129, 1.129, 1)
 z_index = 5
 collision_layer = 4
 collision_mask = 5
@@ -212,7 +213,8 @@ animation = NodePath("AnimatedSprite2D")
 area_2d = NodePath("Area2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1732179574]
-position = Vector2(3, -32)
+modulate = Color(18.892002, 18.529837, 18.861305, 1)
+position = Vector2(4, -32)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_tcr7l")
 animation = &"death"

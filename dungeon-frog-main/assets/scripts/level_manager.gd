@@ -10,6 +10,10 @@ var _recent_level: int = 0
 var _instantiated_level: Node
 	
 
+func _loadl_level():
+	_recent_level = GlobalController.level
+	_create_level.call.call_deferred(_recent_level)
+
 func _create_level(number_level: int):
 	_instantiated_level = levels[number_level].instantiate() 
 	get_parent().add_child.call_deferred(_instantiated_level)
@@ -32,6 +36,8 @@ func _remove_level():
 func _reset_level():
 	await _remove_level()
 	_create_level(_recent_level)
+	
+	game_controller.save_game()
 
 func next_level():
 	if _instantiated_level and _instantiated_level is Level:

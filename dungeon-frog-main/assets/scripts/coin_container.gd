@@ -17,6 +17,8 @@ func _ready() -> void:
 	
 func collect_coin(_coin: Coin):
 	_collected_coins += 1
+	print("Monedas recogidas: ", _collected_coins, " / ", _total_coins)
 	
 	if _collected_coins == _total_coins:
+		print("¡Todas las monedas recogidas!")
 		all_coins_collected.emit()

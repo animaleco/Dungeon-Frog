@@ -8,7 +8,7 @@
 [ext_resource type="Script" uid="uid://bn5fgpb0tebro" path="res://assets/scripts/exit.gd" id="6_v71do"]
 [ext_resource type="Script" uid="uid://xqeauoaxg6ml" path="res://assets/scripts/play.gd" id="6_xmmar"]
 [ext_resource type="PackedScene" uid="uid://cx1kst4miaxyv" path="res://assets/scenes/main_scene/main_scene.tscn" id="7_66en2"]
-[ext_resource type="Script" uid="uid://c2daq17nsestn" path="res://assets/scripts/load.gd" id="8_tp4c4"]
+[ext_resource type="Script" uid="uid://b4wrrc0yaal71" path="res://assets/scripts/reset.gd" id="8_tp4c4"]
 [ext_resource type="PackedScene" uid="uid://b3x6jnswrbcx5" path="res://assets/scenes/game_controller.tscn" id="10_uek13"]
 
 [node name="MainMenu" type="Control" unique_id=1454925081]
@@ -45,17 +45,16 @@ text = "Play"
 script = ExtResource("6_xmmar")
 main_scene = ExtResource("7_66en2")
 
-[node name="Load" type="Button" parent="VBoxContainer" unique_id=1191282538 node_paths=PackedStringArray("game_controller", "play_button")]
+[node name="Reset" type="Button" parent="VBoxContainer" unique_id=1674468720 node_paths=PackedStringArray("game_controller")]
 layout_mode = 2
 theme = ExtResource("1_uu6ob")
 theme_override_styles/normal = ExtResource("2_obrqb")
 theme_override_styles/pressed = ExtResource("3_57ux2")
 theme_override_styles/hover = ExtResource("4_f2xsc")
 theme_override_styles/focus = ExtResource("5_v71do")
-text = "Load"
+text = "Reset"
 script = ExtResource("8_tp4c4")
 game_controller = NodePath("../../GameController")
-play_button = NodePath("../Play")
 
 [node name="Exit" type="Button" parent="VBoxContainer" unique_id=261807103]
 layout_mode = 2
