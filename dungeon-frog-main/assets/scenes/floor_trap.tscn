@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cnd6e7ubhgvc6"]
 
 [ext_resource type="Script" uid="uid://ct5oiullpw811" path="res://assets/scripts/floor_traps.gd" id="1_4cxa6"]
-[ext_resource type="Texture2D" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.webp" id="2_ffbg3"]
+[ext_resource type="Texture2D" uid="uid://bbpkrw5qxbxmm" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.webp" id="2_ffbg3"]
 [ext_resource type="PackedScene" uid="uid://b7j1eovtit7v" path="res://assets/scenes/animation_controller.tscn" id="3_aiq4x"]
 [ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_klli3"]
 
@@ -48,6 +48,7 @@ _data = {
 size = Vector2(5.5, 36)
 
 [node name="FloorTrap" type="AnimatableBody2D" unique_id=1889658172]
+modulate = Color(0.23921569, 0.18039216, 0.3372549, 1)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_4cxa6")

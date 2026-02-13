@@ -40,8 +40,10 @@ func _reset_level():
 	game_controller.save_game()
 
 func next_level():
+	print("a?")
 	if _instantiated_level and _instantiated_level is Level:
 		_instantiated_level.player._disable()
+	print("b?")
 		
 	_recent_level += 1
 	var timer: Timer = Timer.new()

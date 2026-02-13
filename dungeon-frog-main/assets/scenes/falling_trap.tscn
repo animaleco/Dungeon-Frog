@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cq6e0kt6mysl" path="res://assets/scripts/falling_trap.gd" id="1_52s1n"]
 [ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="2_52s1n"]
-[ext_resource type="Texture2D" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.webp" id="2_htrrs"]
+[ext_resource type="Texture2D" uid="uid://bbpkrw5qxbxmm" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.webp" id="2_htrrs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f48xy"]
 size = Vector2(16, 14)
@@ -14,6 +14,7 @@ size = Vector2(16, 4)
 size = Vector2(4, 105)
 
 [node name="FallingTrap" type="RigidBody2D" unique_id=247176691]
+modulate = Color(0.87058824, 0.7254902, 0.972549, 1)
 collision_layer = 4
 collision_mask = 4
 lock_rotation = true
