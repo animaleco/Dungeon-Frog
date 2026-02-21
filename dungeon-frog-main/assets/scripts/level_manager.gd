@@ -3,11 +3,12 @@ extends Node
 
 signal level_loaded(level: Level)
 
-@export var levels: Array[PackedScene]
+@export var levels: Array[LevelData]
 @export var game_controller: GameController
 
 var _recent_level: int = 0
 var _instantiated_level: Node
+var _local_deaths: int = 0
 	
 
 func _loadl_level():
@@ -15,7 +16,8 @@ func _loadl_level():
 	_create_level.call.call_deferred(_recent_level)
 
 func _create_level(number_level: int):
-	_instantiated_level = levels[number_level].instantiate() 
+	var levels_variants = _local_deaths % levels[number_level].variants.size()
+	_instantiated_level = levels[number_level].variants[levels_variants].instantiate() 
 	get_parent().add_child.call_deferred(_instantiated_level)
 	_recent_level = number_level
 	
@@ -34,16 +36,16 @@ func _remove_level():
 		await _instantiated_level.tree_exited
 
 func _reset_level():
+	_local_deaths += 1
 	await _remove_level()
 	_create_level(_recent_level)
 	
 	game_controller.save_game()
 
 func next_level():
-	print("a?")
+	_local_deaths = 0
 	if _instantiated_level and _instantiated_level is Level:
 		_instantiated_level.player._disable()
-	print("b?")
 		
 	_recent_level += 1
 	var timer: Timer = Timer.new()

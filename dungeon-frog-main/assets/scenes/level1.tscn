@@ -34,6 +34,7 @@ position = Vector2(-229, 35)
 [node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("5_kbvyv")]
 
 [node name="coin" parent="CoinContainer" unique_id=1535847078 instance=ExtResource("9_f0uwh")]
+position = Vector2(222, 10)
 
 [node name="Traps" type="Node2D" parent="." unique_id=1619171799]
 

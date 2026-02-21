@@ -48,7 +48,7 @@ _data = {
 size = Vector2(5.5, 36)
 
 [node name="FloorTrap" type="AnimatableBody2D" unique_id=1889658172]
-modulate = Color(0.23921569, 0.18039216, 0.3372549, 1)
+modulate = Color(0.87058824, 0.7254902, 0.972549, 1)
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("1_4cxa6")
