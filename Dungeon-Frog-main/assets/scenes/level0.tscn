@@ -56,7 +56,6 @@ tile_map_data = PackedByteArray("AADo/wEAAAACAAIAAAAVAAIAAAACAAIAAAD///P/AAACAAI
 position = Vector2(-257, 32)
 
 [node name="FloorTrap" parent="." unique_id=1889658172 instance=ExtResource("11_46qtu")]
-modulate = Color(0.87058824, 0.7254902, 0.972549, 1)
 position = Vector2(-216, 25)
 
 [node name="CollisionShape2D2" parent="FloorTrap/Trigger" parent_id_path=PackedInt32Array(1889658172, 280649629) index="0" unique_id=1476552604]
@@ -73,9 +72,8 @@ position = Vector2(-6, -3)
 [node name="CollisionShape2D" parent="CoinContainer/coin/Area2D" parent_id_path=PackedInt32Array(1535847078, 1735382549) index="0" unique_id=709292814]
 position = Vector2(-6, -5)
 
-[node name="Node2D" parent="." unique_id=1455239940 instance=ExtResource("15_k3w1r")]
-modulate = Color(0.23822021, 0.1800017, 0.33777112, 1)
-position = Vector2(-160, 16)
+[node name="spikes" parent="." unique_id=644374339 instance=ExtResource("15_k3w1r")]
+position = Vector2(-174, 13)
 
 [editable path="FloorTrap"]
 [editable path="CoinContainer/coin"]
