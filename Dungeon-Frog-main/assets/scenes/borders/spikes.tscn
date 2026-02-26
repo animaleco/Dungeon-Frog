@@ -47,7 +47,7 @@ tracks/1/keys = {
 length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
-tracks/0/enabled = true
+tracks/0/enabled = false
 tracks/0/path = NodePath("VisualContainer:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
@@ -59,7 +59,7 @@ tracks/0/keys = {
 }
 tracks/1/type = "value"
 tracks/1/imported = false
-tracks/1/enabled = true
+tracks/1/enabled = false
 tracks/1/path = NodePath("CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
@@ -68,6 +68,70 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(12.820513, 2.5641026)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/path = NodePath("VisualContainer:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_l7x6d"]
+resource_name = "RotationLeft"
+length = 1.5333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VisualContainer:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -1.5707964, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 1.5707964, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(14.583332, 4.166668), Vector2(2.5570002, -14.179668), Vector2(14.583328, 4.166664)]
 }
 
 [sub_resource type="Animation" id="Animation_qs4px"]
@@ -102,6 +166,7 @@ tracks/1/keys = {
 _data = {
 &"MoveLeft": SubResource("Animation_s5lv7"),
 &"RESET": SubResource("Animation_trvmd"),
+&"RotationLeft": SubResource("Animation_l7x6d"),
 &"move2": SubResource("Animation_qs4px")
 }
 
@@ -130,7 +195,7 @@ texture = SubResource("AtlasTexture_qm8rg")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981671438]
 light_mask = 7
 visibility_layer = 7
-position = Vector2(12.820513, 2.5641026)
+position = Vector2(14.583332, 4.166668)
 scale = Vector2(0.99999934, 0.99999934)
 shape = SubResource("RectangleShape2D_wfksg")
 

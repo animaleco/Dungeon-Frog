@@ -1,10 +1,10 @@
-class_name Coin
+class_name Key
 extends Node2D
 
 @export var area_2d: Area2D
 @export var producer: AudioStreamPlayer2D
 
-signal collected(coin: Coin)
+signal collected(key: Key)
 
 func _ready() -> void:
 	area_2d.body_entered.connect(_recollect)

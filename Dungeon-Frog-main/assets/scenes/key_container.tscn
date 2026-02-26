@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://chc07stwfv5op"]
+
+[ext_resource type="Script" uid="uid://clkkjpunuxnmj" path="res://assets/scripts/key_container.gd" id="1_34i1p"]
+
+[node name="CoinContainer" type="Node" unique_id=1722807450]
+script = ExtResource("1_34i1p")

@@ -8,7 +8,7 @@ signal player_died
 @export var _speed = 100.0
 @export var _jump_velocity = -210.0
 
-var coins_container: CoinsContainer
+var keys_container: KeysContainer
 var _death: bool
 var _can_move = true
 

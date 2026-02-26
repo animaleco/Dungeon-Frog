@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://chdmh23y0bmdy"]
 
-[ext_resource type="Script" uid="uid://dx7ijytv7oyi7" path="res://assets/scripts/coin.gd" id="1_jn77b"]
-[ext_resource type="Texture2D" uid="uid://bbpkrw5qxbxmm" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.webp" id="2_qlhn6"]
-[ext_resource type="AudioStream" uid="uid://iphmuin36c3m" path="res://assets/sfx/Pickup_out.ogg" id="3_qlhn6"]
-[ext_resource type="Script" uid="uid://cmbp3uehcivk" path="res://assets/scripts/sfx_key.gd" id="4_qlhn6"]
+[ext_resource type="Script" uid="uid://dx7ijytv7oyi7" path="res://assets/scripts/key.gd" id="1_ba31y"]
+[ext_resource type="Texture2D" uid="uid://bbpkrw5qxbxmm" path="res://assets/sprites/Dungeon Tile Set/Dungeon Tile Set.webp" id="2_hcayf"]
+[ext_resource type="AudioStream" uid="uid://iphmuin36c3m" path="res://assets/sfx/Pickup_out.ogg" id="3_52fri"]
+[ext_resource type="Script" uid="uid://cmbp3uehcivk" path="res://assets/scripts/sfx_key.gd" id="4_qgmlv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jn77b"]
 size = Vector2(19, 7)
@@ -46,21 +46,21 @@ _data = {
 }
 
 [node name="coin" type="Node2D" unique_id=1535847078 node_paths=PackedStringArray("area_2d", "producer")]
-script = ExtResource("1_jn77b")
+script = ExtResource("1_ba31y")
 area_2d = NodePath("Area2D")
 producer = NodePath("Sprite2D/SfxKey")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=318424078]
-texture = ExtResource("2_qlhn6")
+texture = ExtResource("2_hcayf")
 region_enabled = true
 region_rect = Rect2(176, 152, 16, 8)
 
 [node name="SfxKey" type="AudioStreamPlayer2D" parent="Sprite2D" unique_id=1893359712]
 rotation = 3.1415927
 scale = Vector2(2.0576115, -1)
-stream = ExtResource("3_qlhn6")
+stream = ExtResource("3_52fri")
 bus = &"SFX"
-script = ExtResource("4_qlhn6")
+script = ExtResource("4_qgmlv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1735382549]
 collision_layer = 8

@@ -1,9 +1,9 @@
 class_name Level
 extends Node2D
 
-var coin_container: CoinsContainer
+var key_container: KeysContainer
 var player: Player
 
 func _ready() -> void:
-	coin_container = $CoinContainer
+	key_container = $KeyContainer
 	player = $Player

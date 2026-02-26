@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="10_46qtu"]
 [ext_resource type="PackedScene" uid="uid://b3x6jnswrbcx5" path="res://assets/scenes/game_controller.tscn" id="10_uek13"]
 [ext_resource type="PackedScene" uid="uid://cnd6e7ubhgvc6" path="res://assets/scenes/floor_trap.tscn" id="11_46qtu"]
-[ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/coin_container.tscn" id="12_ytxn1"]
-[ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/coin.tscn" id="13_tu6bi"]
+[ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/key_container.tscn" id="12_ytxn1"]
+[ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/key.tscn" id="13_tu6bi"]
 [ext_resource type="PackedScene" uid="uid://crb0vbwbw7a4c" path="res://assets/scenes/borders/spikes.tscn" id="15_k3w1r"]
 
 [node name="level0" type="Node2D" unique_id=596658256]
@@ -61,19 +61,19 @@ position = Vector2(-216, 25)
 [node name="CollisionShape2D2" parent="FloorTrap/Trigger" parent_id_path=PackedInt32Array(1889658172, 280649629) index="0" unique_id=1476552604]
 position = Vector2(-7.25, -27)
 
-[node name="CoinContainer" parent="." unique_id=1722807450 instance=ExtResource("12_ytxn1")]
+[node name="KeyContainer" parent="." unique_id=1722807450 instance=ExtResource("12_ytxn1")]
 
-[node name="coin" parent="CoinContainer" unique_id=1535847078 instance=ExtResource("13_tu6bi")]
+[node name="key" parent="KeyContainer" unique_id=1535847078 instance=ExtResource("13_tu6bi")]
 position = Vector2(-210, 159)
 
-[node name="Sprite2D" parent="CoinContainer/coin" index="0" unique_id=318424078]
+[node name="Sprite2D" parent="KeyContainer/key" index="0" unique_id=318424078]
 position = Vector2(-6, -3)
 
-[node name="CollisionShape2D" parent="CoinContainer/coin/Area2D" parent_id_path=PackedInt32Array(1535847078, 1735382549) index="0" unique_id=709292814]
+[node name="CollisionShape2D" parent="KeyContainer/key/Area2D" parent_id_path=PackedInt32Array(1535847078, 1735382549) index="0" unique_id=709292814]
 position = Vector2(-6, -5)
 
 [node name="spikes" parent="." unique_id=644374339 instance=ExtResource("15_k3w1r")]
 position = Vector2(-174, 13)
 
 [editable path="FloorTrap"]
-[editable path="CoinContainer/coin"]
+[editable path="KeyContainer/key"]

@@ -22,6 +22,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(7.5, 55)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7.5, 57)]
+}
 
 [sub_resource type="Animation" id="Animation_wqdlb"]
 resource_name = "move"
@@ -37,6 +49,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(7.5, 55), Vector2(52.999996, 55)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.050940275),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(7.5, 57), Vector2(52.725, 57)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bj2xv"]
 _data = {
@@ -49,7 +73,7 @@ size = Vector2(5.5, 36)
 
 [node name="FloorTrap" type="AnimatableBody2D" unique_id=1889658172]
 modulate = Color(0.87058824, 0.7254902, 0.972549, 1)
-collision_layer = 0
+collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_4cxa6")
 

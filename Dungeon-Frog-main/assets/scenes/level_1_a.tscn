@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bv11anjjt7ki0"]
+
+[ext_resource type="Script" uid="uid://dkxbla2p3wy7v" path="res://assets/scripts/level.gd" id="1_i4b83"]
+[ext_resource type="TileSet" uid="uid://f5iwklegkkfg" path="res://assets/scenes/borders/new_tile_set.tres" id="2_coqag"]
+[ext_resource type="PackedScene" uid="uid://be8kvspbwbdpf" path="res://assets/scenes/borders/borders.tscn" id="3_1m7yg"]
+[ext_resource type="PackedScene" uid="uid://dy8da10jwojva" path="res://assets/scenes/kill_zone.tscn" id="4_gs2u6"]
+[ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="5_gpu86"]
+[ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/key_container.tscn" id="6_o3rs5"]
+[ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/key.tscn" id="7_q5b8a"]
+[ext_resource type="PackedScene" uid="uid://crb0vbwbw7a4c" path="res://assets/scenes/borders/spikes.tscn" id="8_6s8xt"]
+[ext_resource type="PackedScene" uid="uid://d08go7047w8gc" path="res://assets/scenes/camera_2d.tscn" id="9_5w57q"]
+[ext_resource type="PackedScene" uid="uid://cnd6e7ubhgvc6" path="res://assets/scenes/floor_trap.tscn" id="10_ixwuc"]
+
+[node name="Level_1_a" type="Node2D" unique_id=2042642581]
+script = ExtResource("1_i4b83")
+
+[node name="Layers" type="Node" parent="." unique_id=1851129605]
+
+[node name="Level" type="TileMapLayer" parent="Layers" unique_id=653886197 groups=["player"]]
+tile_set = ExtResource("2_coqag")
+
+[node name="Background" type="TileMapLayer" parent="Layers" unique_id=1256177065]
+z_index = -1
+tile_set = ExtResource("2_coqag")
+
+[node name="Borders" parent="Layers" unique_id=1095808582 instance=ExtResource("3_1m7yg")]
+
+[node name="KillZone" parent="Layers" unique_id=1525606513 instance=ExtResource("4_gs2u6")]
+position = Vector2(-92.04, 156.315)
+
+[node name="Player" parent="." unique_id=921028562 instance=ExtResource("5_gpu86")]
+position = Vector2(-241, 33.415)
+
+[node name="KeyContainer" parent="." unique_id=1722807450 instance=ExtResource("6_o3rs5")]
+
+[node name="key" parent="KeyContainer" unique_id=1535847078 instance=ExtResource("7_q5b8a")]
+position = Vector2(233, 9)
+
+[node name="Traps" type="Node2D" parent="." unique_id=1619171799]
+
+[node name="spikes" parent="Traps" unique_id=644374339 instance=ExtResource("8_6s8xt")]
+position = Vector2(-62, 12)
+
+[node name="VisualContainer" parent="Traps/spikes" index="0" unique_id=1548690360]
+position = Vector2(-0.65, 0)
+
+[node name="CollisionShape2D" parent="Traps/spikes" index="1" unique_id=1981671438]
+position = Vector2(12.820513, 2.5641026)
+
+[node name="CollisionShape2D" parent="Traps/spikes/Trigger" parent_id_path=PackedInt32Array(644374339, 1939420972) index="0" unique_id=2028026743]
+position = Vector2(-9.842995, -20.256409)
+
+[node name="spikes2" parent="Traps" unique_id=1500997042 instance=ExtResource("8_6s8xt")]
+position = Vector2(55.999996, 12)
+
+[node name="spikes3" parent="Traps" unique_id=403411784 instance=ExtResource("8_6s8xt")]
+position = Vector2(169.99998, 12)
+
+[node name="CollisionShape2D" parent="Traps/spikes3/Trigger" parent_id_path=PackedInt32Array(403411784, 1939420972) index="0" unique_id=2028026743]
+position = Vector2(-38.46998, -18.75)
+
+[node name="AnimationController" parent="Traps/spikes3" index="3" unique_id=1239882166]
+animation_name = "MoveLeft"
+
+[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("9_5w57q")]
+
+[node name="FloorTrap" parent="." unique_id=1889658172 instance=ExtResource("10_ixwuc")]
+position = Vector2(-136, 25)
+
+[node name="CollisionShape2D2" parent="FloorTrap/Trigger" parent_id_path=PackedInt32Array(1889658172, 280649629) index="0" unique_id=1476552604]
+position = Vector2(-3, -27)
+
+[editable path="Player"]
+[editable path="Traps/spikes"]
+[editable path="Traps/spikes2"]
+[editable path="Traps/spikes3"]
+[editable path="FloorTrap"]

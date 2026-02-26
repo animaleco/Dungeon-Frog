@@ -13,7 +13,7 @@ func _on_level_loaded(level: Level):
 		level.player.player_died.connect(level_manager._reset_level)
 	
 	# All coins - SIEMPRE reconectar porque ONE_SHOT se auto-desconecta
-	if level.coin_container.all_coins_collected.is_connected(level_manager.next_level):
-		level.coin_container.all_coins_collected.disconnect(level_manager.next_level)
+	if level.key_container.all_keys_collected.is_connected(level_manager.next_level):
+		level.key_container.all_keys_collected.disconnect(level_manager.next_level)
 	
-	level.coin_container.all_coins_collected.connect(level_manager.next_level, CONNECT_ONE_SHOT)
+	level.key_container.all_keys_collected.connect(level_manager.next_level, CONNECT_ONE_SHOT)
