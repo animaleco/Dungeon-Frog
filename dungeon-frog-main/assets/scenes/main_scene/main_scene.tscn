@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://op3wv3h0gl87" path="res://assets/scenes/level_2_a.tscn" id="12_jnmms"]
 [ext_resource type="PackedScene" uid="uid://dljb72vvs41ap" path="res://assets/scenes/end_scene.tscn" id="13_hsmsd"]
 [ext_resource type="PackedScene" uid="uid://cdnjv7epftg32" path="res://assets/scenes/level_2_b.tscn" id="13_lj1du"]
+[ext_resource type="PackedScene" uid="uid://bunkae65khjsx" path="res://assets/scenes/level_2_c.tscn" id="14_bayio"]
 
 [sub_resource type="Resource" id="Resource_hsmsd"]
 script = ExtResource("7_8655g")
@@ -27,7 +28,7 @@ metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
 [sub_resource type="Resource" id="Resource_bayio"]
 script = ExtResource("7_8655g")
-variants = Array[PackedScene]([ExtResource("12_jnmms"), ExtResource("13_lj1du")])
+variants = Array[PackedScene]([ExtResource("12_jnmms"), ExtResource("13_lj1du"), ExtResource("14_bayio")])
 metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
 [sub_resource type="Resource" id="Resource_32oa3"]
@@ -39,6 +40,7 @@ metadata/_custom_type_script = "uid://bscig7of4b7w4"
 script = ExtResource("1_0bbc3")
 
 [node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("4_ppxmx")]
+zoom = Vector2(2.475, 2.475)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1534418127]
 

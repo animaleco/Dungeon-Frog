@@ -22,12 +22,12 @@ func _physics_process(delta):
 	velocity += get_gravity() * delta
 	
 		# animation
-	if  not is_on_floor():
-		animation.play("jump")
-	elif velocity.x != 0:
-		animation.play("run")
-	else:
-		animation.play("idle")
+	#if  not is_on_floor():
+		#animation.play("jump")
+	#elif velocity.x != 0:
+		#animation.play("run")
+	#else:
+		#animation.play("idle")
 	
 	if not _can_move:
 		return
@@ -55,7 +55,7 @@ func _disable() -> void:
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	_death = true
 	SoundManager.play_sfx(1)
-	animation.play("death")
+	#animation.play("death")
 	await get_tree().create_timer(0.3).timeout
 	# await get_tree().create_timer(0.5).timeout <-- forma abreviada
 	await get_tree().create_timer(0.5).timeout

@@ -6,10 +6,10 @@
 [ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_klli3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1k4t"]
-size = Vector2(33, 132)
+size = Vector2(33.5, 112.81999)
 
 [sub_resource type="Animation" id="Animation_rn7u1"]
-length = 0.001
+length = 1.1666666
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -20,7 +20,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(7.5, 55)]
+"values": [Vector2(12.999996, 45.465)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -32,7 +32,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(7.5, 57)]
+"values": [Vector2(13, 45.53)]
 }
 
 [sub_resource type="Animation" id="Animation_wqdlb"]
@@ -44,10 +44,10 @@ tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05116495),
+"times": PackedFloat32Array(0, 0.13333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(7.5, 55), Vector2(52.999996, 55)]
+"values": [Vector2(12.999996, 45.465), Vector2(51.745, 45.465)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -56,10 +56,10 @@ tracks/1/path = NodePath("CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.050940275),
+"times": PackedFloat32Array(0, 0.13333334),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(7.5, 57), Vector2(52.725, 57)]
+"values": [Vector2(13, 45.53), Vector2(51.62, 45.53)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_bj2xv"]
@@ -69,23 +69,27 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqdlb"]
-size = Vector2(5.5, 36)
+size = Vector2(4.75, 36)
 
 [node name="FloorTrap" type="AnimatableBody2D" unique_id=1889658172]
-modulate = Color(0.87058824, 0.7254902, 0.972549, 1)
+modulate = Color(0.105882354, 1, 1, 1)
+light_mask = 7
+visibility_layer = 7
+position = Vector2(-142.66, 26.855)
 collision_layer = 4
 collision_mask = 4
 script = ExtResource("1_4cxa6")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2131338017]
-position = Vector2(7.5, 55)
-scale = Vector2(2.0625, 7.1111116)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=947688856]
+modulate = Color(0.19215687, 1, 1, 1)
+position = Vector2(12.999996, 45.465)
+scale = Vector2(2.125001, 7.164334)
 texture = ExtResource("2_ffbg3")
 region_enabled = true
-region_rect = Rect2(32, 32, 16, 18)
+region_rect = Rect2(31.380054, 31.519863, 16.613358, 15.721752)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1508323651]
-position = Vector2(7.5, 57)
+position = Vector2(13, 45.53)
 shape = SubResource("RectangleShape2D_p1k4t")
 
 [node name="AnimationController" parent="." unique_id=407558840 node_paths=PackedStringArray("animation_player") instance=ExtResource("3_aiq4x")]
@@ -102,5 +106,5 @@ one_shot = true
 metadata/_custom_type_script = "uid://bj8x0xeqfo31n"
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Trigger" unique_id=1476552604]
-position = Vector2(-13.25, -27)
+position = Vector2(-6.3399963, -29.855)
 shape = SubResource("RectangleShape2D_wqdlb")

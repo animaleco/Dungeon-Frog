@@ -1,16 +1,12 @@
 [gd_scene format=3 uid="uid://crb0vbwbw7a4c"]
 
 [ext_resource type="Script" uid="uid://yybaq28pwdkv" path="res://assets/scripts/spikes.gd" id="1_6w33d"]
-[ext_resource type="Texture2D" uid="uid://bags2rcab3e4i" path="res://assets/sprites/16-bit-spike-Sheet.png" id="1_wfksg"]
+[ext_resource type="Texture2D" uid="uid://d1qmbd7t2m7pp" path="res://assets/sprites/Dungeon Platformer Tileset [16x16][FREE] - RottingPixels/tileset.png" id="2_trvmd"]
 [ext_resource type="Script" uid="uid://b2lnrp1ghgmc0" path="res://assets/scripts/animation_controller.gd" id="3_8vvp4"]
 [ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_trvmd"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qm8rg"]
-atlas = ExtResource("1_wfksg")
-region = Rect2(0, 0, 15.910416, 16)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfksg"]
-size = Vector2(37.860603, 9.8076935)
+size = Vector2(24.003424, 4.903846)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trvmd"]
 size = Vector2(7.564103, 67.24359)
@@ -182,21 +178,21 @@ scale = Vector2(1.21, 1.21)
 
 [node name="Sprite2D2" type="Sprite2D" parent="VisualContainer" unique_id=1251325801]
 position = Vector2(12.052342, 0)
-texture = SubResource("AtlasTexture_qm8rg")
-
-[node name="Sprite2D3" type="Sprite2D" parent="VisualContainer" unique_id=2068179139]
-position = Vector2(25.826447, 0)
-texture = SubResource("AtlasTexture_qm8rg")
+texture = ExtResource("2_trvmd")
+region_enabled = true
+region_rect = Rect2(33.00528, 104.00198, 14.979366, 8.022133)
 
 [node name="Sprite2D" type="Sprite2D" parent="VisualContainer" unique_id=286048193]
-position = Vector2(-1.7217627, 0)
-texture = SubResource("AtlasTexture_qm8rg")
+position = Vector2(0.513, 0)
+texture = ExtResource("2_trvmd")
+region_enabled = true
+region_rect = Rect2(32.991196, 103.96763, 7.966343, 8.042641)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1981671438]
 light_mask = 7
 visibility_layer = 7
-position = Vector2(14.583332, 4.166668)
-scale = Vector2(0.99999934, 0.99999934)
+position = Vector2(9.628, 2.083)
+scale = Vector2(0.9999991, 0.9999991)
 shape = SubResource("RectangleShape2D_wfksg")
 
 [node name="Trigger" type="Area2D" parent="." unique_id=1939420972]
@@ -210,7 +206,7 @@ metadata/_custom_type_script = "uid://bj8x0xeqfo31n"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Trigger" unique_id=2028026743]
 light_mask = 7
 visibility_layer = 7
-position = Vector2(-9.8429985, -20.54487)
+position = Vector2(-17.636665, -31.25)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_trvmd")
 

@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://bw02g4m3a4u2y" path="res://assets/scenes/level_1_b.tscn" id="5_v5bi1"]
 [ext_resource type="PackedScene" uid="uid://b8w4yor80gi5m" path="res://assets/scenes/level_1_c.tscn" id="6_hf86m"]
 [ext_resource type="PackedScene" uid="uid://op3wv3h0gl87" path="res://assets/scenes/level_2_a.tscn" id="7_v5bi1"]
+[ext_resource type="PackedScene" uid="uid://cdnjv7epftg32" path="res://assets/scenes/level_2_b.tscn" id="8_2y6v8"]
+[ext_resource type="PackedScene" uid="uid://dljb72vvs41ap" path="res://assets/scenes/end_scene.tscn" id="9_y1ft4"]
 
 [sub_resource type="Resource" id="Resource_jcmlt"]
 script = ExtResource("2_hqypy")
@@ -20,9 +22,14 @@ metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
 [sub_resource type="Resource" id="Resource_ufje2"]
 script = ExtResource("2_hqypy")
-variants = Array[PackedScene]([ExtResource("7_v5bi1")])
+variants = Array[PackedScene]([ExtResource("7_v5bi1"), ExtResource("8_2y6v8")])
+metadata/_custom_type_script = "uid://bscig7of4b7w4"
+
+[sub_resource type="Resource" id="Resource_8iid8"]
+script = ExtResource("2_hqypy")
+variants = Array[PackedScene]([ExtResource("9_y1ft4")])
 metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
 [node name="level_manager" type="Node" unique_id=625218637]
 script = ExtResource("1_la3yo")
-levels = Array[ExtResource("2_hqypy")]([SubResource("Resource_jcmlt"), SubResource("Resource_1qy8m"), SubResource("Resource_ufje2")])
+levels = Array[ExtResource("2_hqypy")]([SubResource("Resource_jcmlt"), SubResource("Resource_1qy8m"), SubResource("Resource_ufje2"), SubResource("Resource_8iid8")])
