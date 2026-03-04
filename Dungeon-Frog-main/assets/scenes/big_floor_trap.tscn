@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_evjld"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ov6na"]
-size = Vector2(3719.9993, 135.92749)
+size = Vector2(3704.8992, 135.92749)
 
 [sub_resource type="Animation" id="Animation_evjld"]
 resource_name = "MoveRight"
@@ -18,10 +18,10 @@ tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.7),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 3.6, 3.7333333),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(81.75, 44.765), Vector2(368.49, 44.765)]
+"values": [Vector2(81.75, 44.765), Vector2(452.585, 44.765), Vector2(507.045, 44.765)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -30,10 +30,10 @@ tracks/1/path = NodePath("CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.7),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 3.6, 3.7),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(81.5, 45.455), Vector2(369.44, 45.455)]
+"values": [Vector2(81.5, 45.455), Vector2(453.135, 45.455), Vector2(507.655, 45.455)]
 }
 
 [sub_resource type="Animation" id="Animation_dujji"]
@@ -62,10 +62,58 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(81.5, 45.5)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(11.9, 9.428572)]
+}
 
 [sub_resource type="Animation" id="Animation_61bgk"]
 resource_name = "SpriteW"
 length = 6.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2, 3.9333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(81.75, 44.765), Vector2(-4.25, 44.765), Vector2(81.75001, 44.765)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2, 3.9333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(11.9, 9.428572), Vector2(0.43333286, 9.428572), Vector2(11.900001, 9.428572)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CollisionShape2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2, 2.1, 2.12, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(81.5, 45.455), Vector2(-93.245, 45.455), Vector2(-144.717, 45.455), Vector2(381.067, 45.455), Vector2(81.778, 45.455)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_61bgk"]
 _data = {
