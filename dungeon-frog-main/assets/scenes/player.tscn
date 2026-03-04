@@ -15,10 +15,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tcr7l"]
-size = Vector2(13.333337, 36.66667)
+size = Vector2(13.333337, 38.333347)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_beuf1"]
-size = Vector2(3, 11)
+size = Vector2(3.5, 11)
 
 [node name="Player" type="CharacterBody2D" unique_id=921028562 node_paths=PackedStringArray("animation", "area_2d") groups=["player"]]
 modulate = Color(1.129, 1.129, 1.129, 1)
@@ -38,7 +38,7 @@ sprite_frames = SubResource("SpriteFrames_14505")
 animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1512872728]
-position = Vector2(13, -29.000002)
+position = Vector2(13, -28.75)
 scale = Vector2(0.3, 0.3)
 shape = SubResource("RectangleShape2D_tcr7l")
 
@@ -47,6 +47,5 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1862554214]
-visible = false
-position = Vector2(13.5, -29.5)
+position = Vector2(13, -28.5)
 shape = SubResource("RectangleShape2D_beuf1")

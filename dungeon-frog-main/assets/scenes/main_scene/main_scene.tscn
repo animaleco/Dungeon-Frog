@@ -11,36 +11,31 @@
 [ext_resource type="PackedScene" uid="uid://sni4jrbj14dc" path="res://assets/scenes/deaths_counter.tscn" id="8_vs3kp"]
 [ext_resource type="PackedScene" uid="uid://bw02g4m3a4u2y" path="res://assets/scenes/level_1_b.tscn" id="9_vs3kp"]
 [ext_resource type="PackedScene" uid="uid://b8w4yor80gi5m" path="res://assets/scenes/level_1_c.tscn" id="11_vs3kp"]
-[ext_resource type="PackedScene" uid="uid://op3wv3h0gl87" path="res://assets/scenes/level_2_a.tscn" id="12_jnmms"]
-[ext_resource type="PackedScene" uid="uid://dljb72vvs41ap" path="res://assets/scenes/end_scene.tscn" id="13_hsmsd"]
-[ext_resource type="PackedScene" uid="uid://cdnjv7epftg32" path="res://assets/scenes/level_2_b.tscn" id="13_lj1du"]
-[ext_resource type="PackedScene" uid="uid://bunkae65khjsx" path="res://assets/scenes/level_2_c.tscn" id="14_bayio"]
 
 [sub_resource type="Resource" id="Resource_hsmsd"]
 script = ExtResource("7_8655g")
 variants = Array[PackedScene]([ExtResource("8_jnmms")])
 metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
+[sub_resource type="Resource" id="Resource_vs3kp"]
+script = ExtResource("7_8655g")
+variants = Array[PackedScene]([ExtResource("8_f837b")])
+metadata/_custom_type_script = "uid://bscig7of4b7w4"
+
+[sub_resource type="Resource" id="Resource_jnmms"]
+script = ExtResource("7_8655g")
+variants = Array[PackedScene]([ExtResource("9_vs3kp")])
+metadata/_custom_type_script = "uid://bscig7of4b7w4"
+
 [sub_resource type="Resource" id="Resource_lj1du"]
 script = ExtResource("7_8655g")
-variants = Array[PackedScene]([ExtResource("8_f837b"), ExtResource("9_vs3kp"), ExtResource("11_vs3kp")])
-metadata/_custom_type_script = "uid://bscig7of4b7w4"
-
-[sub_resource type="Resource" id="Resource_bayio"]
-script = ExtResource("7_8655g")
-variants = Array[PackedScene]([ExtResource("12_jnmms"), ExtResource("13_lj1du"), ExtResource("14_bayio")])
-metadata/_custom_type_script = "uid://bscig7of4b7w4"
-
-[sub_resource type="Resource" id="Resource_32oa3"]
-script = ExtResource("7_8655g")
-variants = Array[PackedScene]([ExtResource("13_hsmsd")])
+variants = Array[PackedScene]([ExtResource("11_vs3kp")])
 metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
 [node name="MainScene" type="Node2D" unique_id=1865979419]
 script = ExtResource("1_0bbc3")
 
 [node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("4_ppxmx")]
-zoom = Vector2(2.475, 2.475)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1534418127]
 
@@ -53,7 +48,7 @@ process_mode = 3
 script = ExtResource("7_bqfir")
 
 [node name="level_manager" parent="." unique_id=625218637 node_paths=PackedStringArray("game_controller") instance=ExtResource("3_rdtq2")]
-levels = Array[ExtResource("7_8655g")]([SubResource("Resource_hsmsd"), SubResource("Resource_lj1du"), SubResource("Resource_bayio"), SubResource("Resource_32oa3")])
+levels = Array[ExtResource("7_8655g")]([SubResource("Resource_hsmsd"), SubResource("Resource_vs3kp"), SubResource("Resource_jnmms"), SubResource("Resource_lj1du")])
 game_controller = NodePath("../GameController")
 
 [editable path="GameController"]
