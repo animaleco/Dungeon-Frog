@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://wj2xrysdwpq8"]
+
+[ext_resource type="Script" uid="uid://dkxbla2p3wy7v" path="res://assets/scripts/level.gd" id="1_g8jb7"]
+[ext_resource type="PackedScene" uid="uid://be8kvspbwbdpf" path="res://assets/scenes/borders/borders.tscn" id="2_8gj5h"]
+[ext_resource type="PackedScene" uid="uid://dy8da10jwojva" path="res://assets/scenes/kill_zone.tscn" id="3_8u82h"]
+[ext_resource type="PackedScene" uid="uid://d08go7047w8gc" path="res://assets/scenes/camera_2d.tscn" id="4_s8nrk"]
+[ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="5_8gj5h"]
+[ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/key_container.tscn" id="8_3exp4"]
+[ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/key.tscn" id="9_g8jb7"]
+
+[node name="level7" type="Node2D" unique_id=270396273]
+script = ExtResource("1_g8jb7")
+
+[node name="Layers" type="Node" parent="." unique_id=1834077109]
+
+[node name="Borders" parent="Layers" unique_id=1095808582 instance=ExtResource("2_8gj5h")]
+
+[node name="KillZone" parent="Layers" unique_id=1525606513 instance=ExtResource("3_8u82h")]
+position = Vector2(-85, 163)
+
+[node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("4_s8nrk")]
+
+[node name="Player" parent="." unique_id=921028562 instance=ExtResource("5_8gj5h")]
+position = Vector2(-192.87, 39.71)
+
+[node name="KeyContainer" parent="." unique_id=1722807450 instance=ExtResource("8_3exp4")]
+
+[node name="key" parent="KeyContainer" unique_id=1535847078 instance=ExtResource("9_g8jb7")]
+position = Vector2(179, 8)
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1726107632]

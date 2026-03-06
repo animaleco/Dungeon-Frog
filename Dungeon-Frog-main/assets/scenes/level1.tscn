@@ -49,3 +49,4 @@ position = Vector2(179, 8)
 
 [editable path="Traps/FloorTrap"]
 [editable path="Player"]
+[editable path="KeyContainer/key"]
