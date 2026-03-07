@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://d08go7047w8gc" path="res://assets/scenes/camera_2d.tscn" id="4_s8nrk"]
 [ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="5_8gj5h"]
 [ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/key_container.tscn" id="8_3exp4"]
+[ext_resource type="PackedScene" uid="uid://crb0vbwbw7a4c" path="res://assets/scenes/borders/spikes.tscn" id="8_t7r7p"]
 [ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/key.tscn" id="9_g8jb7"]
 
 [node name="level7" type="Node2D" unique_id=270396273]
@@ -29,3 +30,24 @@ position = Vector2(-192.87, 39.71)
 position = Vector2(179, 8)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1726107632]
+
+[node name="spikes" parent="." unique_id=644374339 instance=ExtResource("8_t7r7p")]
+modulate = Color(0.105882354, 1, 1, 1)
+position = Vector2(-138, 14.38)
+
+[node name="AnimationController" parent="spikes" index="3" unique_id=1239882166]
+animation_name = "RESET"
+
+[node name="spikes2" parent="." unique_id=1122659733 instance=ExtResource("8_t7r7p")]
+modulate = Color(0.105882354, 1, 1, 1)
+position = Vector2(-4, 14.38)
+
+[node name="AnimationController" parent="spikes2" index="3" unique_id=1239882166]
+animation_name = "RESET"
+
+[node name="spikes3" parent="." unique_id=1043245269 instance=ExtResource("8_t7r7p")]
+modulate = Color(0.105882354, 1, 1, 1)
+position = Vector2(133.55, 14.38)
+
+[editable path="spikes"]
+[editable path="spikes2"]

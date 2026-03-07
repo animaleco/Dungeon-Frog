@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://bj8x0xeqfo31n" path="res://assets/scripts/Trigger.gd" id="4_klli3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1k4t"]
-size = Vector2(35, 140.42749)
+size = Vector2(35, 140.11874)
 
 [sub_resource type="Animation" id="Animation_jls40"]
 resource_name = "FakeDown"
@@ -47,7 +47,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.38),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(12.999996, 45.465), Vector2(13, 170.81)]
+"values": [Vector2(13, 45.465), Vector2(13, 170.81)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -56,10 +56,10 @@ tracks/1/path = NodePath("CollisionShape2D:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.38),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(13, 45.53), Vector2(13, 208.04)]
+"values": [Vector2(13, 43.71), Vector2(13, 169.285)]
 }
 
 [sub_resource type="Animation" id="Animation_n740k"]

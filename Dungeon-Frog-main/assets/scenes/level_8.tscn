@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cdeoeqhtga2og" path="res://assets/scenes/player.tscn" id="5_q40xe"]
 [ext_resource type="PackedScene" uid="uid://chc07stwfv5op" path="res://assets/scenes/key_container.tscn" id="6_wdddc"]
 [ext_resource type="PackedScene" uid="uid://chdmh23y0bmdy" path="res://assets/scenes/key.tscn" id="7_q40xe"]
+[ext_resource type="PackedScene" uid="uid://crb0vbwbw7a4c" path="res://assets/scenes/borders/spikes.tscn" id="8_wdddc"]
 
 [node name="level8" type="Node2D" unique_id=2132561533]
 script = ExtResource("1_f6led")
@@ -29,3 +30,25 @@ position = Vector2(-192.335, 39.725)
 
 [node name="key" parent="KeyContainer" unique_id=1535847078 instance=ExtResource("7_q40xe")]
 position = Vector2(177, 9)
+
+[node name="spikes" parent="." unique_id=644374339 instance=ExtResource("8_wdddc")]
+modulate = Color(0.105882354, 1, 1, 1)
+position = Vector2(-107, 14.38)
+
+[node name="AnimationController" parent="spikes" index="3" unique_id=1239882166]
+animation_name = "MoveRight"
+
+[node name="spikes2" parent="." unique_id=1929787822 instance=ExtResource("8_wdddc")]
+modulate = Color(0.105882354, 1, 1, 1)
+position = Vector2(6, 14.38)
+
+[node name="AnimationController" parent="spikes2" index="3" unique_id=1239882166]
+animation_name = "RESET"
+
+[node name="spikes3" parent="." unique_id=1589647623 instance=ExtResource("8_wdddc")]
+modulate = Color(0.105882354, 1, 1, 1)
+position = Vector2(141.505, 14.38)
+
+[editable path="spikes"]
+[editable path="spikes2"]
+[editable path="spikes3"]

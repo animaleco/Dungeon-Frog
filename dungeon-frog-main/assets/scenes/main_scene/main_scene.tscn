@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://wj2xrysdwpq8" path="res://assets/scenes/level_7.tscn" id="15_32oa3"]
 [ext_resource type="PackedScene" uid="uid://dljb72vvs41ap" path="res://assets/scenes/end_scene.tscn" id="15_bayio"]
 [ext_resource type="PackedScene" uid="uid://cn5ujsyjvgmu3" path="res://assets/scenes/level_9.tscn" id="16_32oa3"]
+[ext_resource type="PackedScene" uid="uid://cmfepp7ersufc" path="res://assets/scenes/level_10.tscn" id="17_ufoxh"]
 
 [sub_resource type="Resource" id="Resource_hsmsd"]
 script = ExtResource("7_8655g")
@@ -65,6 +66,16 @@ metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
 [sub_resource type="Resource" id="Resource_xtnp7"]
 script = ExtResource("7_8655g")
+variants = Array[PackedScene]([ExtResource("16_32oa3")])
+metadata/_custom_type_script = "uid://bscig7of4b7w4"
+
+[sub_resource type="Resource" id="Resource_dbnu1"]
+script = ExtResource("7_8655g")
+variants = Array[PackedScene]([ExtResource("17_ufoxh")])
+metadata/_custom_type_script = "uid://bscig7of4b7w4"
+
+[sub_resource type="Resource" id="Resource_s5yvv"]
+script = ExtResource("7_8655g")
 variants = Array[PackedScene]([ExtResource("15_bayio")])
 metadata/_custom_type_script = "uid://bscig7of4b7w4"
 
@@ -84,7 +95,7 @@ process_mode = 3
 script = ExtResource("7_bqfir")
 
 [node name="level_manager" parent="." unique_id=625218637 node_paths=PackedStringArray("game_controller") instance=ExtResource("3_rdtq2")]
-levels = Array[ExtResource("7_8655g")]([SubResource("Resource_hsmsd"), SubResource("Resource_vs3kp"), SubResource("Resource_jnmms"), SubResource("Resource_lj1du"), SubResource("Resource_bayio"), SubResource("Resource_32oa3"), SubResource("Resource_i4mi3"), SubResource("Resource_ufoxh"), SubResource("Resource_3lxft"), SubResource("Resource_xtnp7")])
+levels = Array[ExtResource("7_8655g")]([SubResource("Resource_hsmsd"), SubResource("Resource_vs3kp"), SubResource("Resource_jnmms"), SubResource("Resource_lj1du"), SubResource("Resource_bayio"), SubResource("Resource_32oa3"), SubResource("Resource_i4mi3"), SubResource("Resource_ufoxh"), SubResource("Resource_3lxft"), SubResource("Resource_xtnp7"), SubResource("Resource_dbnu1"), SubResource("Resource_s5yvv")])
 game_controller = NodePath("../GameController")
 
 [editable path="GameController"]
