@@ -31,23 +31,23 @@ position = Vector2(179, 8)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1726107632]
 
-[node name="spikes" parent="." unique_id=644374339 instance=ExtResource("8_t7r7p")]
+[node name="spikes" parent="Node2D" unique_id=644374339 instance=ExtResource("8_t7r7p")]
 modulate = Color(0.105882354, 1, 1, 1)
 position = Vector2(-138, 14.38)
 
-[node name="AnimationController" parent="spikes" index="3" unique_id=1239882166]
+[node name="AnimationController" parent="Node2D/spikes" index="3" unique_id=1239882166]
 animation_name = "RESET"
 
-[node name="spikes2" parent="." unique_id=1122659733 instance=ExtResource("8_t7r7p")]
+[node name="spikes2" parent="Node2D" unique_id=1122659733 instance=ExtResource("8_t7r7p")]
 modulate = Color(0.105882354, 1, 1, 1)
 position = Vector2(-4, 14.38)
 
-[node name="AnimationController" parent="spikes2" index="3" unique_id=1239882166]
+[node name="AnimationController" parent="Node2D/spikes2" index="3" unique_id=1239882166]
 animation_name = "RESET"
 
-[node name="spikes3" parent="." unique_id=1043245269 instance=ExtResource("8_t7r7p")]
+[node name="spikes3" parent="Node2D" unique_id=1043245269 instance=ExtResource("8_t7r7p")]
 modulate = Color(0.105882354, 1, 1, 1)
 position = Vector2(133.55, 14.38)
 
-[editable path="spikes"]
-[editable path="spikes2"]
+[editable path="Node2D/spikes"]
+[editable path="Node2D/spikes2"]

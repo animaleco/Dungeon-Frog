@@ -11,21 +11,20 @@ var _instantiated_level: Node
 var _local_deaths: int = 0
 	
 
-func _loadl_level():
-	_recent_level = GlobalController.level
-	_create_level.call.call_deferred(_recent_level)
 
 func _create_level(number_level: int):
 	var levels_variants = _local_deaths % levels[number_level].variants.size()
-	_instantiated_level = levels[number_level].variants[levels_variants].instantiate() 
-	get_parent().add_child.call_deferred(_instantiated_level)
+	_instantiated_level = levels[number_level].variants[levels_variants].instantiate()
+	
+	# Agregar directo, sin call_deferred
+	get_parent().add_child(_instantiated_level)
 	_recent_level = number_level
 	
-	await  get_tree().process_frame
+	# Esperar un frame de FÍSICA, no de proceso
+	await get_tree().physics_frame
 	
 	if _instantiated_level is Level:
 		level_loaded.emit(_instantiated_level)
-		
 		GlobalController.level = number_level
 		game_controller.save_game()
 		

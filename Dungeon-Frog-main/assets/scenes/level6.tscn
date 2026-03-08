@@ -31,11 +31,11 @@ position = Vector2(179, 8)
 
 [node name="Node2D" type="Node2D" parent="." unique_id=981753920]
 
-[node name="spikes" parent="." unique_id=644374339 instance=ExtResource("8_e1m1q")]
+[node name="spikes" parent="Node2D" unique_id=644374339 instance=ExtResource("8_e1m1q")]
 modulate = Color(0.105882354, 1, 1, 1)
 position = Vector2(-4.065, 14.38)
 
-[node name="AnimationController" parent="spikes" index="3" unique_id=1239882166]
+[node name="AnimationController" parent="Node2D/spikes" index="3" unique_id=1239882166]
 animation_name = "RESET"
 
-[editable path="spikes"]
+[editable path="Node2D/spikes"]

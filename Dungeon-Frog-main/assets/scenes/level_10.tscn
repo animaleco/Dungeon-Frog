@@ -17,36 +17,36 @@ script = ExtResource("1_xjtdg")
 
 [node name="Traps" type="Node2D" parent="." unique_id=1649334033]
 
+[node name="spikes" parent="Traps" unique_id=644374339 instance=ExtResource("5_bs332")]
+modulate = Color(0.105882354, 1, 1, 1)
+position = Vector2(-151.335, 14.38)
+
+[node name="CollisionShape2D" parent="Traps/spikes/Trigger" parent_id_path=PackedInt32Array(644374339, 1939420972) index="0" unique_id=2028026743]
+position = Vector2(310.1446, -34.125004)
+
+[node name="AnimationController" parent="Traps/spikes" index="3" unique_id=1239882166]
+animation_name = "LongMoveRight2"
+
 [node name="spikes2" parent="Traps" unique_id=31340765 instance=ExtResource("5_bs332")]
 modulate = Color(0.105882354, 1, 1, 1)
-position = Vector2(151, 14)
+position = Vector2(151, 14.38)
 
 [node name="CollisionShape2D" parent="Traps/spikes2/Trigger" parent_id_path=PackedInt32Array(31340765, 1939420972) index="0" unique_id=2028026743]
-position = Vector2(-321.80334, -29.166668)
+position = Vector2(-319.72003, -34.125004)
 
 [node name="AnimationController" parent="Traps/spikes2" index="3" unique_id=1239882166]
 animation_name = "LongMoveLeft2"
 
-[node name="Player" parent="." unique_id=921028562 instance=ExtResource("3_b8po6")]
-position = Vector2(-192.87, 39.725)
-_jump_velocity = -179.64
-
 [node name="Camera2D" parent="." unique_id=800673880 instance=ExtResource("3_bs332")]
-
-[node name="spikes" parent="." unique_id=644374339 instance=ExtResource("5_bs332")]
-modulate = Color(0.105882354, 1, 1, 1)
-position = Vector2(-164.85, 14.38)
-
-[node name="CollisionShape2D" parent="spikes/Trigger" parent_id_path=PackedInt32Array(644374339, 1939420972) index="0" unique_id=2028026743]
-position = Vector2(336.21753, -29.958334)
-
-[node name="AnimationController" parent="spikes" index="3" unique_id=1239882166]
-animation_name = "LongMoveRight2"
 
 [node name="KeyContainer" parent="." unique_id=1722807450 instance=ExtResource("6_7rw7s")]
 
 [node name="key" parent="KeyContainer" unique_id=1535847078 instance=ExtResource("7_kkkwl")]
 position = Vector2(179, 10)
 
+[node name="Player" parent="." unique_id=921028562 instance=ExtResource("3_b8po6")]
+position = Vector2(-196.695, 39.725)
+_jump_velocity = -179.64
+
+[editable path="Traps/spikes"]
 [editable path="Traps/spikes2"]
-[editable path="spikes"]

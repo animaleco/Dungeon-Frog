@@ -68,4 +68,7 @@ position = Vector2(-6, -3)
 [node name="CollisionShape2D" parent="KeyContainer/key/Area2D" parent_id_path=PackedInt32Array(1535847078, 1735382549) index="0" unique_id=709292814]
 position = Vector2(-6, -5)
 
+[node name="AnimationPlayer" parent="KeyContainer/key" index="2" unique_id=672634585]
+autoplay = &""
+
 [editable path="KeyContainer/key"]
